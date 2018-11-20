@@ -1,7 +1,9 @@
 # Jquery_project  
   
 --> sur la base du repo suivant <a href="https://github.com/mathieubrunpicard/todolist-app">Mathieu brunpicard</a>  
-###  Ce travail à été réalisé en peer-coding entre @LisaLou et @Javi  
+###  Ce travail à été réalisé en peer-coding entre @LisaLou et @Javi
+
+### Voici le lien sur l'appli heroku : https://jqueryproject.herokuapp.com/  
   
 ## Ce travail est à consulter en Localhost en suivant ce process :  
 *1* `cloner ce repo`  
