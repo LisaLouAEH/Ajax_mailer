@@ -25,4 +25,20 @@
 // script de tabulation:
 $(document).ready(function() {
     
+    $("ul > .card").hide();
+    $(".container > ul > li").css("border", "solid green 0.3px");
+    $(".container > ul > li").click(function(){
+        //$(".container > ul > li").css("background-color", "red");
+        
+        if( $(this).next().is(":hidden") ) {
+            $("ul > .card").hide(200);
+            $(this).next().show(200);
+        }
+        else{
+            $("ul > .card").hide(200);
+        }
+       
+    });
 });
+
+//$(".cat__title").find("ul")

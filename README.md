@@ -8,3 +8,4 @@
 //= require bootstrap-sprockets```  dans application.js  
 Pourquoi le `//=` ?  
 *  une erreur apparait sur le navigateur résolu en ajoutant ``` '~> 4.3.3'``` a la gem jquery dans le Gemfile.
+*  add script pour la tab dans application.js avec les selecteurs html
