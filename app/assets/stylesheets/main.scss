@@ -3,15 +3,40 @@
     flex-direction: row;
     justify-content: center;
 }
+
 #carrousel{
     justify-content: center;
     position: relative;
     margin: auto;
 }
-button{
-    background-color:whitesmoke;
+
+.controls {
+	display: flex;
+	justify-content: space-between;
+}
+.prev, .next{
+	color: #fff;
+	font-weight: bold;
+    background-color: #4685f2;
+    border: solid;
+    border-color: #000;
     border-radius: 100%;
 }
-button:hover{
+
+.prev:hover{
     background-color: rgb(37, 36, 36);
+}
+
+.next:hover{
+    background-color: rgb(37, 36, 36);
+}
+
+.login {
+	padding: 5px, 5px;
+	background-color: #beb1e2;
+}
+
+.signup {
+	margin-top: 5px;
+	background-color: #beb1e2;
 }

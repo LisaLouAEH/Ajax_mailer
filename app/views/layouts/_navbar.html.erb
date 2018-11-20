@@ -14,20 +14,20 @@
        
       <div class="dropdown">
          <img class="rounded-circle" height="50px" width="50px" src="http://digitalspyuk.cdnds.net/17/25/320x320/square-1498216547-avatar-neytiri.jpg">
-        <ul>
-          <% unless user_signed_in? %>
-        <li class="nav-item">
-          <button class="login">Log In</button>
-        </li>
-        <li class="nav-item">
-          <button class="signup">Sign Up</button>
-        </li>
-        <% else %>
-        <li class="nav-item">
-          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
-        </li>
-      <% end %>
-       </ul>
+            <ul>
+              <% unless user_signed_in? %>
+              <li class="nav-item">
+                <button class="login">Log In</button>
+              </li>
+              <li class="nav-item">
+                <button class="signup">Sign Up</button>
+              </li>
+              <% else %>
+              <li class="nav-item">
+                <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+              </li>
+              <% end %>
+            </ul>
       </div>
   </div>
 </nav>

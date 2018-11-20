@@ -84,7 +84,8 @@ $(document).ready(function() {
     $img.css('display', 'none'); // on cache les images
 
     $currentImg.css('display', 'block'); // on affiche seulement l'image courante
-    $carrousel.append('<div class="controls"> <button class="prev">○</button> <button class="next">○</button> </div>');
+    $carrousel.append('<div class="controls"> <button class="prev"> < </button> <button class="next"> > </button> </div>');
+
 
     $('.next').click(function(){ // image suivante
         i++;
