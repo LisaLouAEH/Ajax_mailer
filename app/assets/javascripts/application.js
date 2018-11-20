@@ -24,8 +24,10 @@
 
 // script de tabulation:
 $(document).ready(function() {
-    
+    $(".modal-signup").hide();
+    $(".modal-login").hide();   
     $("ul > .card").hide();
+    $(".dropdown > ul").hide();
     $(".container > ul > li").css("border", "solid green 0.3px");
     $(".container > ul > li").click(function(){
         //$(".container > ul > li").css("background-color", "red");
@@ -36,9 +38,37 @@ $(document).ready(function() {
         }
         else{
             $("ul > .card").hide(200);
+        }  
+        });
+// dropdown du avatar
+
+    $(".rounded-circle").click(function() {
+        if( $(this).next().is(":hidden")) {
+             $(".dropdown > ul").show();
+        }else {
+             $(".dropdown > ul").hide();
         }
-       
+    });
+    $(".dropdown > ul > li").css("list-style-type", "none");
+
+    $(".login").click(function() {
+        if( $(".modal-login").is(":hidden")) {
+            $(".modal-login").show();
+        }else {
+             $(".modal-login").hide();
+        };
+    });
+
+    $(".signup").click(function() {
+        if( $(".modal-signup").is(":hidden")) {
+            $(".modal-signup").show();
+        }else {
+             $(".modal-signup").hide();
+        };    
     });
 });
+
+
+
 
 //$(".cat__title").find("ul")
