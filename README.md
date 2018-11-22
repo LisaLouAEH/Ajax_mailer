@@ -39,6 +39,15 @@ invoke  active_record
 
 ```  
 --> insertion de quelques emails en console pour le test.  
-```Email.create(object: "au sujet du dernier message", body: "nous avons le plaisir de vous envoyer un email inutil")```  
+```
+Email.create(object: "au sujet du dernier message", body: "nous avons le plaisir de vous envoyer un email inutil")```  
+
+**Etape 2/**  
+```
+Root ton projet à email#index, et commence à faire ton controller et ta view.
+```  
+--> Dans le fichier routes, j'ai remplacé ```root to: "home#index"``` par ```root to: "email#index"```.  
   
+**Etape 3/**  
+
 
