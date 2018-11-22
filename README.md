@@ -103,6 +103,20 @@ def create
 ```   
 --> Evidement CA MARCHE PAS:  
 <img src="/screen_shot/error1.png"/>
+--> Effectivement le path create n'existe pas dans mon fichier route :  
+```
+Rails.application.routes.draw do
+  devise_for :users
+  # root ton projet a email#index
+  root to: "email#index"
+  get 'create/:id', to:'email#create'
+  get 'show', to:'email#show'
+  # -----------------------------
+  resources :tasks, except: [:show]
+end
+```  
+--> Sauf que quand je mets ca dans index ```<%= link_to e.object, create(:id)_path, remote: true %>```, ben ca marche pas non plus :(  
+<img src="/screen_shot/error2.png">
 
 
 
