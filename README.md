@@ -162,12 +162,20 @@ $('.<%=@email.id%>').hide();
 ```  
 --> Et la routes : ```delete '/delete/:id', to:'email#destroy', as: 'delete'```  
 --> Ca marche ok !  
-
+  
+**Etape 4/**  
+```
+Pour t'entrainer encore plus, nous allons te demander de marquer les emails non lus. C'est à dire qu'un email non lu aura une marque spéciale dans la colonne liste (Gmail affiche le sujet en gras, Outlook change le fond en jaune). Libre à toi de choisir ce qui te semble le plus sympa (background-color: yellow si tu es en panne d'inspiration).
+```  
+--> on va tenter ca en ajoutant une class `yellow` dans le script js du show.  
+```$('.<%= @email.id %>').toggleClass("yellow");```  
+--> CA MARCHE DU PREMIER COUP !!!!!!!!!!! YESSSSSSSSS  
+  
 **Etape X/**  
 ```
 Fais un petit seeds.rb pour la production, comme ça les gens qui iront sur ton app verront les emails 😉
 ```  
---> Le seed lance une créa d'emails en DB (10).
+--> Le seed lance une créa d'emails super réaliste :) en DB (10).  
 
 
 
