@@ -3,7 +3,7 @@
 <div class="container">
     <div class = "content">
         <% @emails.each do |e|%>
-        <p class="<%=e.id%>"><%= link_to e.object, show_path(e), remote: true %></p>
+        <p class="<%=e.id%> title"><%= link_to e.object, show_path(e), remote: true %></p>
         <%end%>
     </div>
 

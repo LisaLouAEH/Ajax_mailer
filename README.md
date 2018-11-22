@@ -169,7 +169,10 @@ Pour t'entrainer encore plus, nous allons te demander de marquer les emails non 
 ```  
 --> on va tenter ca en ajoutant une class `yellow` dans le script js du show.  
 ```$('.<%= @email.id %>').toggleClass("yellow");```  
---> CA MARCHE DU PREMIER COUP !!!!!!!!!!! YESSSSSSSSS  
+--> CA MARCHE DU PREMIER COUP !!!!!!!!!!! YESSSSSSSSS 
+Parcontre ... quand on recharge la page, les messages relue repassent en non-lue :(  HHHHHHH  
+*A fixer plus tard si le temps*
+
   
 **Etape X/**  
 ```
