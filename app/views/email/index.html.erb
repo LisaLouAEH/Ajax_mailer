@@ -1,22 +1,25 @@
 <h1>Ceci est la page index avec la liste des emails</h1>
 <br>
 <div class="container">
-    <div class = "email__object">
+    <div class = "content">
         <% @emails.each do |e|%>
-        <p><%= link_to e.object, show_path(e), remote: true %></p>
-<!--TUTO <%= link_to "New Task", new_task_path, id: "new_link", remote: true %>   -->
+        <p class="<%=e.id%>"><%= link_to e.object, show_path(e), remote: true %></p>
         <%end%>
     </div>
-    <div class="email__body">
-        <h4>L'objet de l'email, en gros</h4>
-            <div>
-                <h2 class="object"> </h2>
-            </div>
-        <h4>Le corps de l'email, en taille normale</h4>
-            <div>
-                <h4 class="body"> </h4>
-            </div>
-        <h4>un lien pour supprimer l'email</h4>
-            <div></div>
+
+    <div class="content">
+        <div class="object__box">
+            <p>L'objet de l'email, en gros</p>
+            <h2 class="object"> </h2>
+        </div>
+
+        <div class="body__box">
+            <p>Le corps de l'email, en taille normale</p>
+            <h4 class="body"> </h4>
+        </div>
+
+        <div class="delete__box">
+            
+        </div>
     </div>
 </div>

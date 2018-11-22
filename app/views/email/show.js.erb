@@ -3,5 +3,6 @@ $(document).ready(function() {
    $('.object').text("<< <%=j @email.object %> >>");
    $('.body').text("<< <%=j @email.body %> >>");
 
+   $('.delete__box').html('<%=j link_to "un lien pour supprimer email", delete_path(@email.id), remote: true, method: "delete" %>');
 });
 

@@ -17,18 +17,14 @@ class EmailController < ApplicationController
             format.js   
          end
     end
-=begin from TUTO
-    def create
-        @task = Task.create!(allowed_params)
-      
-        respond_to do |f|
-          f.html { redirect_to tasks_url }
-          f.js
-        end
-    end      
-=end
 
-    def delete 
-
+    def destroy 
+        @email = Email.find(params[:id])
+        @email.destroy
+        respond_to do |format|
+            puts "l'email a été supprimé !!!"
+            format.html { redirect_to show_path }
+            format.js   
+         end
     end
 end

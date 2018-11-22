@@ -142,6 +142,32 @@ $(document).ready(function() {
 });
 ```  
 --> Et OK j'ai bien le contenu qui change quand je click sur un autre email.  
+--> Création d'une methode destroy dans le controller email:  
+```
+def destroy 
+        @email = Email.find(params[:id])
+        @email.destroy
+        respond_to do |format|
+            puts "l'email a été supprimé !!!"
+            format.html { redirect_to show_path }
+            format.js   
+         end
+    end
+```  
+--> Créa du script associé dans une views destroy.js.erb:  
+```
+$('.object').hide(' <%=j @email.object %>');
+$('.body').hide('<%=j @email.body %>');
+$('.<%=@email.id%>').hide();
+```  
+--> Et la routes : ```delete '/delete/:id', to:'email#destroy', as: 'delete'```  
+--> Ca marche ok !  
+
+**Etape X/**  
+```
+Fais un petit seeds.rb pour la production, comme ça les gens qui iront sur ton app verront les emails 😉
+```  
+--> Le seed lance une créa d'emails en DB (10).
 
 
 

@@ -1,17 +1,28 @@
 // Place all the styles related to the email controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.container{
+    display: flex;
+    flex-direction: row;
+}
+.content{
+    margin: 20px;
+    padding: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: antiquewhite;
+    text-align: left;
+    width: 40%;
+}
 .object{
     border: solid 0.5 blue;
     font-size: 32px;
     color: black;
     padding: 5px;
     margin: 5px;
-    text-align: center;
 }
 .body{
     border: solid 0.5 orange;
-    font-size: 32px;
+    font-size: 12px;
     color: orangered;
     padding: 5px;
     margin: 5px;
