@@ -117,7 +117,31 @@ end
 ```  
 --> Sauf que quand je mets ca dans index ```<%= link_to e.object, create(:id)_path, remote: true %>```, ben ca marche pas non plus :(  
 <img src="/screen_shot/error2.png">
-
+--> FINALEMENT je mets dans l'index ```<%= link_to e.object, show_path(e), remote: true %>``` et   
+dans mon fichier route ```get '/show/:id', to:'email#show', as: 'show'```  
+--> ma méthode create devient une methode show avec :  
+```
+def show 
+        puts "CONNECT METHODE SHOW !!!"
+        @email = Email.find(params[:id])
+        puts "#####################################"
+        puts @email.object
+        puts "#####################################"
+        respond_to do |format|
+            puts "ceci est le format :  #{format}"
+            format.html { redirect_to show_path }
+            format.js   
+         end
+    end
+```  
+--> CA MARCHE ok maintenant le script en JS dans show.js.erb donne:  
+```
+$(document).ready(function() {
+   $('.object').text("<< <%=j @email.object %> >>");
+   $('.body').text("<< <%=j @email.body %> >>");
+});
+```  
+--> Et OK j'ai bien le contenu qui change quand je click sur un autre email.  
 
 
 

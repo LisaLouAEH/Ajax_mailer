@@ -5,16 +5,16 @@ class EmailController < ApplicationController
         return @emails
     end
 
-    def create 
-        puts "CONNECT METHODE CREATE OK !!"
-        @email = Email.find_by(params[:id])
+    def show 
+        puts "CONNECT METHODE SHOW !!!"
+        @email = Email.find(params[:id])
         puts "#####################################"
         puts @email.object
         puts "#####################################"
         respond_to do |format|
             puts "ceci est le format :  #{format}"
             format.html { redirect_to show_path }
-            format.js   ## cela va rendre create.js.erb
+            format.js   
          end
     end
 =begin from TUTO
@@ -27,9 +27,6 @@ class EmailController < ApplicationController
         end
     end      
 =end
-    def show 
-        puts "CONNECT METHODE SHOW !!!"
-    end
 
     def delete 
 

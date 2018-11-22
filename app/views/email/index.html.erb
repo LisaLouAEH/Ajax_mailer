@@ -3,15 +3,19 @@
 <div class="container">
     <div class = "email__object">
         <% @emails.each do |e|%>
-        <p><%= link_to e.object, create(:id)_path, remote: true %></p>
+        <p><%= link_to e.object, show_path(e), remote: true %></p>
 <!--TUTO <%= link_to "New Task", new_task_path, id: "new_link", remote: true %>   -->
         <%end%>
     </div>
     <div class="email__body">
         <h4>L'objet de l'email, en gros</h4>
-            <div></div>
+            <div>
+                <h2 class="object"> </h2>
+            </div>
         <h4>Le corps de l'email, en taille normale</h4>
-            <div></div>
+            <div>
+                <h4 class="body"> </h4>
+            </div>
         <h4>un lien pour supprimer l'email</h4>
             <div></div>
     </div>
