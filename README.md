@@ -3,7 +3,7 @@
 --> sur la base du repo suivant <a href="https://github.com/mathieubrunpicard/todolist-app">Mathieu brunpicard</a>  
 ###  Ce travail à été réalisé en peer-coding entre @LisaLou et 
 
-## appli heroku : https://jqueryproject.herokuapp.com/  
+## <a href="https://ajax-project.herokuapp.com/">l'appli heroku</a> 
   
 ## ou consulter en Localhost en suivant ce process :  
 *1* `cloner ce repo`  
