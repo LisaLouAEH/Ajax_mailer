@@ -3,7 +3,8 @@
 <div class="container">
     <div class = "email__object">
         <% @emails.each do |e|%>
-        <p><%= e.object %></p>
+        <p><%= link_to e.object, create_path, id: e.id, remote: true %></p>
+<!--TUTO <%= link_to "New Task", new_task_path, id: "new_link", remote: true %>   -->
         <%end%>
     </div>
     <div class="email__body">

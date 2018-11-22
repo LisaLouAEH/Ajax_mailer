@@ -83,6 +83,26 @@ La suppression d'email sera faite elle aussi avec de l'AJAX.
     </div>
 </div>
 ```  
+--> Chaque objet doit etre un lien clickable qui dirige vers une methode create par exemple en prenant son ID comme paramètre pour qu'on puisse retrouver le contenu correspondant dans la BDD.   
+AHAHAHAH how the fuck should i do this ?  
+
+--> Bon alors déja je tente de mettre des ```link_to``` et ```remote : to``` un peu partout autour de mes itérations de ```e.object``` + Je combine ca avec une méthode create de ce gout là:  
+```
+def create 
+        puts "CONNECT METHODE CREATE OK !!"
+        @email = Email.find_by(params[:id])
+        puts "#####################################"
+        puts @email.object
+        puts "#####################################"
+        respond_to do |format|
+            puts "ceci est le format :  #{format}"
+            format.html { redirect_to show_path }
+            format.js   ## cela va rendre create.js.erb
+         end
+    end
+```   
+--> Evidement CA MARCHE PAS:  
+<img src="screen_shot/error1.jpg"/>
 
 
 
