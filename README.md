@@ -102,7 +102,7 @@ def create
     end
 ```   
 --> Evidement CA MARCHE PAS:  
-<img src="screen_shot/error1.jpg"/>
+<img src="/screen_shot/error1.jpg"/>
 
 
 
