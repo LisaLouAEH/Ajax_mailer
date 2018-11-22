@@ -1,0 +1,17 @@
+<h1>Ceci est la page index avec la liste des emails</h1>
+<br>
+<div class="container">
+    <div class = "email__object">
+        <% @emails.each do |e|%>
+        <p><%= e.object %></p>
+        <%end%>
+    </div>
+    <div class="email__body">
+        <h4>L'objet de l'email, en gros</h4>
+            <div></div>
+        <h4>Le corps de l'email, en taille normale</h4>
+            <div></div>
+        <h4>un lien pour supprimer l'email</h4>
+            <div></div>
+    </div>
+</div>
