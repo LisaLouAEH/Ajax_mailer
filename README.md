@@ -1,7 +1,7 @@
 # Ajax_mailer  
   
 --> sur la base du repo suivant <a href="https://github.com/mathieubrunpicard/todolist-app">Mathieu brunpicard</a>  
-###  Ce travail à été réalisé en peer-coding entre @LisaLou et 
+###  Ce travail à été réalisé par @LisaLou
 
 ## <a href="https://ajax-project.herokuapp.com/">l'appli heroku</a> 
   
